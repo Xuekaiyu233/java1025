@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+
     <meta charset="UTF-8">
     <title>毕业设计管理登录</title>
     <!-- 新 Bootstrap 核心 CSS 文件 -->
@@ -12,40 +14,77 @@
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#loginDiv").mouseenter(function(){
+                $("#loginDiv").css("opacity","1");
+            });
+
+        $("#loginDiv").mouseleave(function(){
+            $("#loginDiv").css("opacity","0.7");
+        });
+        });
+
+        function f1() {
+            var name = document.getElementById("name").value;
+            var res = /^[A-Za-z0-9]+$/.test(name);
+            if (!res){
+                alert("请合法输入（字母和数字）");
+                return false;
+            }
+        }
+        function sub() {
+f1()
+        }
+    </script>
     <style>
         body{
-            background-color: #6699F4;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
         }
         #loginDiv{
-            width: 550px;
-            height: 530px;
+            background-image: url("00.jpeg");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            width: 450px;
+            height: 520px;
             background-color: white;
             margin: 0 auto;
-            margin-top: 50px;
+            margin-top: 140px;
+            margin-bottom: 41px;
             text-align: center;/*让div内容居中*/
             padding-top: 30px;
+            border-radius:30px ;
+            opacity: 0.7;
         }
         #name{
-            width: 426px;
-            height: 55px;
+            border:solid pink;
+            width: 326px;
+            height: 45px;
             border-radius:5px ;
             margin-left: -30px;/*让文本框左移*/
             background-color: transparent;
             padding-left: 30px;/*文本框左边内边距加大*/
+            color: black;
+            font-weight: 700;
+            font-size: 18px;
         }
         #upsw{
-            width: 426px;
-            height: 55px;
+            border:solid pink;
+            width: 326px;
+            height: 45px;
             border-radius:5px ;
             margin-left: -30px;/*让文本框左移*/
             background-color: transparent;
             padding-left: 30px;/*文本框左边内边距加大*/
-            margin-top: 25px;
+            margin-top: 15px;
+            color: black;
         }
         #loginBtn{
-            width: 300px;
-            height: 55px;
-            background-color: #FF6B4D;
+            width: 250px;
+            height: 45px;
+            background-color: palevioletred;
             color: white;
             border-radius:5px ;
             border: none;
@@ -55,32 +94,56 @@
             margin-left: 15px;
         }
         img{
-            margin-left: 22px;
+            margin-left: 10px;
+            border-radius: 50%;
         }
         #dev{
             text-align: center;
             margin-top: 20px;
             font-size: 12px;
             margin-left: 20px;
+           font-size: 20px;
+            font-weight: 700;
+        }
 
+        h2{
+            font-weight: 800;
+            margin-top: -5px;
+        }
+        #kj{
+            margin-left: 0px;
+            border-radius: 50%;
+            margin-top: -10px;
+        }
+        #lcv{
+            margin-left: 30px;
+        }
+        #erw{
+            margin-left: 30px;
         }
     </style>
 </head>
-<body>
-     <div id="loginDiv">
-  <img src="科技.png"  width="400px">
-         <h1>毕业设计管理系统</h1>
-         <img src="人头.jpg">
-         <input type="text" id="name" placeholder="请输入用户名"><br>
-         <img src="锁子.jpg">
+<body background="09.jpg"  >
+html,body{
+width:100%;
+height:100%
+}
+     <div id="loginDiv"  >
+  <img src="kjdx.png"  width="78px" height="78px" id="kj">
+       <img src="22.png" width="350px" height="100px">
+         <h2 >毕业设计管理系统</h2>
+         <img src="13.png" width="20" height="25">
+         <input type="text" id="name"  name="num" placeholder="请输入用户名"><br>
+         <img src="15.png" width="20" height="25">
          <input type="password" id="upsw" ><br>
-         <a href="http://job.tyust.edu.cn/"><button id="loginBtn">登&nbsp&nbsp&nbsp录</button></a><br>
-         <a href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&response_type=code&redirect_uri=http%3A%2F%2Fspcdp.cdposs.qq.com%2Fauth%2Fcallback&client_id=101477813&state=http%3A%2F%2Fspcdp.cdposs.qq.com%2F"><img src="QQ.jpg"></a>
-         <a href="https://wx.qq.com/"><img src="微信.jpg"></a>
-         <a href="https://weibo.com/" ><img src="微博.jpg"></a>
+         <a href="http://job.tyust.edu.cn/"><button id="loginBtn" value="提交" onclick="sub();">登&nbsp&nbsp&nbsp录</button></a><br>
+         <a href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&response_type=code&redirect_uri=http%3A%2F%2Fspcdp.cdposs.qq.com%2Fauth%2Fcallback&client_id=101477813&state=http%3A%2F%2Fspcdp.cdposs.qq.com%2F"><img src="QQ2.png" width="50px" height="50px" clss="L"></a>
+         <a href="https://wx.qq.com/"><img src="微信2.png" width="50px" height="50px" id="erw"></a>
+         <a  href="https://weibo.com/"  ><img src="微博2.png"width="50px" height="50px" id="lcv"></a>
          <br>
          <div id="dev">
-             开发者：太原科技大学   薛凯予
+             开发者：太原科技大学  &nbsp; &nbsp;薛凯予<br>
+             技术支持：英才汇硕信息科技有限公司
          </div>
      </div>
 </body>
